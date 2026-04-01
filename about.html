@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - 4FRAME STUDIOS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">4FRAME <span>STUDIOS</span></a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="upcoming.html">Upcoming</a></li>
+                <li><a href="about.html" style="color: var(--primary-color);">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="page-section about-section">
+        <h2 class="section-title">About <span>Us</span></h2>
+        
+        <div class="founder-info">
+            <h3>Hi, I'm <span>Deepak Kumawat</span></h3>
+            <p class="est-date">Founder | Established: 1 June 2026</p>
+            <p class="about-message">
+                Welcome to 4FRAME STUDIOS! We try to provide the best content and cinematic experiences. I hope you will support our journey and enjoy the movies and videos we create. <br><br>
+                <strong>Thank you for your endless support!</strong>
+            </p>
+            
+            <div class="social-links">
+                <a href="#" class="btn social-btn yt-btn">YouTube</a>
+                <a href="#" class="btn social-btn ig-btn">Instagram</a>
+            </div>
+        </div>
+    </section>
+
+    <hr class="divider">
+
+    <section class="page-section review-section">
+        <h2 class="section-title">Leave a <span>Review</span></h2>
+        
+        <div class="review-form-container">
+            <form id="review-form">
+                <input type="text" id="reviewer-name" placeholder="Your Name" required>
+                <input type="email" id="reviewer-email" placeholder="Your Email" required>
+                <textarea id="reviewer-desc" rows="5" placeholder="Write your review here..." required></textarea>
+                <button type="submit" class="btn submit-btn">Submit Review</button>
+            </form>
+        </div>
+
+        <h2 class="section-title" style="margin-top: 80px;">What People <span>Say</span></h2>
+        <div class="review-grid" id="public-reviews">
+            
+            <div class="review-card">
+                <h4>Rahul Sharma</h4>
+                <p class="review-text">"Amazing studio! The cinematography in the recent short film was mind-blowing. Keep it up Deepak!"</p>
+            </div>
+
+            <div class="review-card">
+                <h4>Aman Verma</h4>
+                <p class="review-text">"Waiting eagerly for the next Frame X Production. Best quality content out there."</p>
+            </div>
+
+            <div class="review-card">
+                <h4>Priya Singh</h4>
+                <p class="review-text">"Great visuals and storytelling. Truly a professional team!"</p>
+            </div>
+
+        </div>
+        
+        <div class="text-center" style="text-align: center; margin-top: 30px;">
+            <button class="watch-btn" id="load-more-btn">Read More Reviews</button>
+        </div>
+
+    </section>
+
+
+
+    </section>
+
+    <script type="module" src="app.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - 4FRAME STUDIOS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">4FRAME <span>ADMIN</span></a>
+        <nav>
+            <ul>
+                <li><a href="index.html" target="_blank">View Live Site</a></li>
+                <li><button id="logout-btn" class="watch-btn" style="padding: 8px 20px; cursor: pointer;">Logout</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="page-section">
+        <h2 class="section-title">Control <span>Panel</span></h2>
+
+        <div class="admin-grid">
+            
+            <div class="admin-card">
+                <h3>➕ Add Upcoming Video</h3>
+                <form id="add-video-form">
+                    <input type="text" id="video-title" placeholder="Video Title (e.g., Short Film Teaser)" required>
+                    <input type="url" id="video-link" placeholder="YouTube Video Link" required>
+                    
+                    <div style="display: flex; gap: 10px;">
+                        <input type="date" id="video-date" required style="width: 50%;">
+                        <input type="time" id="video-time" required style="width: 50%;">
+                    </div>
+                    
+                    <button type="submit" class="btn submit-btn" style="margin-top: 10px;">Publish to Website</button>
+                </form>
+            </div>
+
+            <div class="admin-card">
+                <h3>💬 Manage Reviews</h3>
+                <p style="color: #888; font-size: 0.9rem; margin-bottom: 15px;">Tick the box to show a review on the public About page (Max 3).</p>
+                
+                <div class="review-manager-list" id="admin-reviews-container">
+                    
+                    <div class="admin-review-item">
+                        <div class="review-details">
+                            <strong>Rahul Sharma</strong>
+                            <p>"Amazing studio! The cinematography..."</p>
+                        </div>
+                        <div class="admin-actions">
+                            <label class="show-toggle"><input type="checkbox" checked> Show</label>
+                            <button class="delete-btn">Delete</button>
+                        </div>
+                    </div>
+
+                    <div class="admin-review-item">
+                        <div class="review-details">
+                            <strong>Aman Verma</strong>
+                            <p>"Waiting eagerly for the next..."</p>
+                        </div>
+                        <div class="admin-actions">
+                            <label class="show-toggle"><input type="checkbox"> Show</label>
+                            <button class="delete-btn">Delete</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <script type="module" src="admin.js"></script>
+
+
+</body>
+</html>
