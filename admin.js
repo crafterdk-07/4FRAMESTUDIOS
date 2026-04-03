@@ -50,16 +50,28 @@ if(loginForm){
     });
 }
 
-// Logout Button Logic (FIXED)
-if(logoutBtn){
-    logoutBtn.addEventListener('click', () => {
-        signOut(auth).then(() => {
+// ==========================================
+// 🔴 LOGOUT BUTTON LOGIC (ULTRA SECURE)
+// ==========================================
+if (logoutBtn) {
+    logoutBtn.addEventListener('click', async (e) => {
+        e.preventDefault(); // Button ka normal behavior roko
+        logoutBtn.innerText = "Logging out..."; // User ko dikhe ki process ho raha hai
+        
+        try {
+            await signOut(auth); // Firebase se session khatam
             alert("Aap safely logout ho chuke hain! 🔒");
-            window.location.reload(); // Page ko forcibly refresh aur lock karne ke liye
-        }).catch((error) => {
+            
+            // Reload ki jagah seedha Home Page (index.html) par bhej do
+            window.location.replace("index.html"); 
+        } catch (error) {
             console.error("Logout Error:", error);
-        });
+            alert("Logout me dikkat aayi: " + error.message);
+            logoutBtn.innerText = "Logout";
+        }
     });
+} else {
+    console.error("Logout button nahi mila! Check HTML.");
 }
 
 // ==========================================
